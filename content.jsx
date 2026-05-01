@@ -12,7 +12,7 @@ const CONTENT = {
       rsvp: "RSVP",
     },
     hero: {
-      eyebrow: "Wir heiraten · Freie Trauung",
+      eyebrow: "Wir heiraten",
       and: "und",
       date: "04. September 2027",
       place: "Villa Finetta · Salsomaggiore Terme · Italia",
@@ -71,7 +71,7 @@ const CONTENT = {
       cards: [
         { h: "Mit dem Flugzeug", b: "Nächste Flughäfen: Mailand-Linate (MXP/LIN, ~1:45h), Bologna (BLQ, ~1:30h), Parma (PMF, ~30 min)." },
         { h: "Mit dem Auto", b: "Über die A1 bis Fidenza, dann ca. 15 min nach Salsomaggiore. Parkplätze direkt an der Villa." },
-        { h: "In der Nähe", b: "Tabiano Terme erreicht ihr in ~20 Min. zu Fuß, Salsomaggiore Terme in ~16 Min. mit dem Auto. Lokaler Taxi-Service: +39 324 682 0285." },
+        { h: "In der Nähe", b: "Tabiano Terme erreicht ihr in ~20 Min. zu Fuß, Salsomaggiore Terme in ~15 Min. mit dem Auto. Lokaler Taxi-Service: +39 324 682 0285." },
         { h: "Ankunft an der Villa", b: "Die Villa liegt etwas außerhalb des Ortes, am Ende einer kleinen Schotterstraße mit einem Tor. Für die Einfahrt benötigt ihr einen PIN-Code, den wir euch rechtzeitig mitteilen." },
       ],
     },
@@ -96,7 +96,7 @@ const CONTENT = {
       title: "Bevor ihr fragt",
       items: [
         { q: "Können wir Kinder mitbringen?", a: "Ja, sehr gerne — eure Kinder sind herzlich willkommen. Sagt uns im RSVP einfach Bescheid, wer mitkommt, damit wir alles entsprechend planen können." },
-        { q: "Gibt es vegetarische / vegane Optionen?", a: "Ja — es gibt Pizza, und jede:r kann sich seine Pizza nach Wunsch auswählen (vegetarisch und vegan inklusive). Allergien könnt ihr uns gerne im RSVP mitteilen." },
+        { q: "Gibt es vegetarische / vegane Optionen?", a: "Ja — es gibt Pizza, und jeder kann sich seine Pizza nach Wunsch auswählen (vegetarisch und vegan inklusive). Allergien könnt ihr uns gerne im RSVP mitteilen." },
         { q: "Wann sollten wir absagen / zusagen?", a: "Wir freuen uns über eure Antwort bis spätestens 31. März 2027." },
         { q: "Was ist mit Geschenken?", a: "Eure Anwesenheit ist unser schönstes Geschenk. Wer dennoch beitragen möchte: wir wünschen uns einen Beitrag zu unserer Hochzeitsreise." },
         { q: "Drinnen oder draußen?", a: "Wir feiern unter freiem Himmel — die Villa hat aber einen wunderschönen überdachten Bereich, falls das Wetter andere Pläne hat." },
@@ -144,7 +144,7 @@ const CONTENT = {
       rsvp: "RSVP",
     },
     hero: {
-      eyebrow: "We're getting married · Symbolic ceremony",
+      eyebrow: "We're getting married",
       and: "and",
       date: "September 4, 2027",
       place: "Villa Finetta · Salsomaggiore Terme · Italy",
@@ -203,7 +203,7 @@ const CONTENT = {
       cards: [
         { h: "By plane", b: "Closest airports: Milan (MXP/LIN, ~1h45), Bologna (BLQ, ~1h30), Parma (PMF, ~30 min)." },
         { h: "By car", b: "A1 motorway to Fidenza, then 15 min to Salsomaggiore. Parking right at the villa." },
-        { h: "Nearby", b: "Tabiano Terme is ~20 min on foot, Salsomaggiore Terme ~16 min by car. Local taxi service: +39 324 682 0285." },
+        { h: "Nearby", b: "Tabiano Terme is ~20 min on foot, Salsomaggiore Terme ~15 min by car. Local taxi service: +39 324 682 0285." },
         { h: "Arriving at the villa", b: "The villa sits just outside town, at the end of a small gravel road with a gate. You'll need a PIN code to enter — we'll share it with you in good time." },
       ],
     },

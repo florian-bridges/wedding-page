@@ -455,7 +455,7 @@ function Gallery({ t }) {
 // ——— FAQ ———
 function FAQ({ t }) {
   const f = t.faq;
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(-1);
   return (
     <Section id="faq" kicker={f.kicker} title={f.title} narrow>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 50, opacity: 0.65 }}>
