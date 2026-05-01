@@ -128,7 +128,7 @@ const CONTENT = {
     foot: {
       sign: "Mit Liebe,",
       names: "V & F",
-      contact: "Bei Fragen erreicht ihr uns jederzeit per Nachricht.",
+      contact: "Bei Fragen sind wir jederzeit erreichbar.",
     },
   },
 
