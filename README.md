@@ -14,25 +14,10 @@ Wedding information page for our ceremony at Villa Finetta, Salsomaggiore Terme,
 - **FAQ** — kids, food, gifts, weather, …
 - DE / EN language toggle
 
-## Hosting (GitHub Pages)
+## Fonts
+1. Italianno — the flowing script font used for the big names, "V & F" monogram, pull quotes, and decorative text
+2. Cormorant Garamond — the elegant serif used for body text, headings, dates, and most readable content
+3. Cormorant Infant — a slightly softer variant of Cormorant, available as an alternative via the font switcher
+4. Inter — a clean sans-serif used for nav links, labels, buttons, and the small uppercase mono-style labels
+5. JetBrains Mono — the monospace font used for all the small uppercase labels like "— Kapitel Eins —", section kickers, and location text
 
-1. Push all files to the repo root (or a `/docs` folder)
-2. Go to **Settings → Pages** and set the source to the branch/folder above
-3. Done — no build step needed, everything runs client-side
-
-## Adding real photos
-
-Open [sections.jsx](sections.jsx) and search for `<PhotoPlaceholder`. Replace each one with:
-
-```jsx
-<img src="your-photo.jpg" alt="caption" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-```
-
-## Customisation
-
-The tweaks panel (bottom-right corner in the browser) lets you switch:
-- **Color palette** — Romantic & airy · Rustic Tuscan · Editorial ivory · Mediterranean
-- **Font pairing** — Cormorant + Italianno · Cormorant Infant · Cormorant only
-- **Language** — Deutsch / English
-
-Content lives in [content.jsx](content.jsx) — all text is in one place for easy editing.
