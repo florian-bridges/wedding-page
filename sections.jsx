@@ -125,9 +125,9 @@ function Story({ t }) {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 50, alignItems: 'start', marginTop: 48 }} className="story-grid">
         <div style={{ position: 'sticky', top: 100 }}>
-          <PhotoPlaceholder caption="01 — Wo alles begann" tint="rose" ratio="3 / 4" label="Erstes Foto" />
+          <img src="photos/about_us_1.jpg" alt="Unsere Geschichte" style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', display: 'block' }} />
           <div style={{ height: 18 }} />
-          <PhotoPlaceholder caption="02 — Italien, Sommer" tint="sage" ratio="4 / 3" label="Reisefoto" />
+          <img src="photos/about_us_2.jpg" alt="Unsere Geschichte" style={{ width: '100%', aspectRatio: '3 / 4', objectFit: 'cover', display: 'block' }} />
         </div>
 
         <div style={{ paddingTop: 12 }}>
@@ -407,8 +407,24 @@ function Dresscode({ t }) {
 // ——— GALLERY ———
 function Gallery({ t }) {
   const g = t.gallery;
-  const tints = ['sage', 'rose', 'cream', 'sage', 'rose'];
-  const ratios = ['4 / 5', '3 / 4', '4 / 5', '3 / 4', '4 / 5'];
+  const photos = [
+    // Row 1 — Italy & romance
+    { src: 'photos/foto_7_1.jpg', ratio: '4 / 5', col: 'span 4', mt: 0  },
+    { src: 'photos/foto_1.jpg',   ratio: '3 / 4', col: 'span 4', mt: 30 },
+    { src: 'photos/foto_12.jpg',  ratio: '3 / 4', col: 'span 4', mt: 0  },
+    // Row 2 — Adventures
+    { src: 'photos/foto_9.jpg',   ratio: '1 / 1', col: 'span 5', mt: 0,  pos: 'bottom' },
+    { src: 'photos/foto_5.JPG',   ratio: '2 / 3', col: 'span 3', mt: 30 },
+    { src: 'photos/foto_4.jpg',   ratio: '3 / 4', col: 'span 4', mt: 0  },
+    // Row 3 — Fun & playful
+    { src: 'photos/foto_8.jpg',   ratio: '3 / 2', col: 'span 5', mt: 0 },
+    { src: 'photos/foto_3.jpg',   ratio: '3 / 4', col: 'span 3', mt: 0 },
+    { src: 'photos/foto_2.jpg',   ratio: '4 / 3', col: 'span 4', mt: 0 },
+    // Row 4 — Warm close
+    { src: 'photos/foto_10.jpg',  ratio: '4 / 3', col: 'span 4', mt: 0 },
+    { src: 'photos/foto_11.jpg',  ratio: '3 / 4', col: 'span 4', mt: 0 },
+    { src: 'photos/foto_6.jpg',   ratio: '4 / 3', col: 'span 4', mt: 0 },
+  ];
   return (
     <Section id="gallery" kicker={g.kicker} title={g.title} dark>
       <p style={{
@@ -422,29 +438,15 @@ function Gallery({ t }) {
         gridTemplateColumns: 'repeat(12, 1fr)',
         gap: 18,
       }} className="gallery-grid">
-        {g.caps.map((cap, i) => {
-          // asymmetric layout
-          const layout = [
-            { col: 'span 5', row: 'span 2', off: 0 },
-            { col: 'span 4', row: 'span 1', off: 30 },
-            { col: 'span 3', row: 'span 1', off: 0 },
-            { col: 'span 4', row: 'span 1', off: 0 },
-            { col: 'span 3', row: 'span 1', off: 30 },
-          ][i];
-          return (
-            <div key={i} style={{
-              gridColumn: layout.col, gridRow: layout.row,
-              marginTop: layout.off,
-            }}>
-              <PhotoPlaceholder
-                caption={`${String(i + 1).padStart(2, '0')} — ${cap}`}
-                tint={tints[i]}
-                ratio={ratios[i]}
-                label={`Foto ${String(i + 1).padStart(2, '0')}`}
-              />
-            </div>
-          );
-        })}
+        {photos.map((p, i) => (
+          <div key={i} style={{ gridColumn: p.col, marginTop: p.mt }}>
+            <img
+              src={p.src}
+              alt={`Foto ${i + 1}`}
+              style={{ width: '100%', aspectRatio: p.ratio, objectFit: 'cover', display: 'block', objectPosition: p.pos || 'center' }}
+            />
+          </div>
+        ))}
       </div>
     </Section>
   );
