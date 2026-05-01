@@ -513,6 +513,151 @@ function FAQ({ t }) {
   );
 }
 
+// ——— RSVP ———
+function RSVP({ t }) {
+  const r = t.rsvp;
+  const [sat, setSat] = useState(null);
+  const [sun, setSun] = useState(null);
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+
+  const inputStyle = {
+    width: '100%', padding: '12px 16px',
+    background: 'var(--cream)', border: '1px solid var(--line)',
+    fontFamily: 'var(--serif)', fontSize: 17, color: 'var(--ink)',
+    outline: 'none', borderRadius: 0,
+    transition: 'border-color 0.2s',
+  };
+  const labelStyle = {
+    display: 'block', fontFamily: 'var(--sans)',
+    fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase',
+    color: 'var(--ink-soft)', marginBottom: 8,
+  };
+  const AttendRadio = ({ value, set, yesLabel, noLabel }) => (
+    <div style={{ display: 'flex', gap: 0 }}>
+      {[{ v: 'yes', l: yesLabel }, { v: 'no', l: noLabel }].map(({ v, l }) => (
+        <button key={v} type="button" onClick={() => set(v)} style={{
+          flex: 1, padding: '11px 0', border: '1px solid var(--line)',
+          marginLeft: v === 'no' ? -1 : 0,
+          background: value === v ? (v === 'yes' ? 'var(--sage-tint)' : 'var(--rose-tint)') : 'var(--cream)',
+          color: value === v ? 'var(--ink)' : 'var(--ink-soft)',
+          fontFamily: 'var(--sans)', fontSize: 12, letterSpacing: '0.1em',
+          textTransform: 'uppercase', cursor: 'pointer',
+          transition: 'all 0.2s',
+        }}>{l}</button>
+      ))}
+    </div>
+  );
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+    const data = new FormData(e.target);
+    data.append('saturday', sat || 'not selected');
+    data.append('sunday_brunch', sun || 'not selected');
+    try {
+      const res = await fetch('https://formspree.io/f/mgodvobr', {
+        method: 'POST', body: data, headers: { Accept: 'application/json' },
+      });
+      setStatus(res.ok ? 'success' : 'error');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return (
+      <Section id="rsvp" dark narrow>
+        <div style={{ textAlign: 'center', padding: '40px 0' }}>
+          <div style={{ fontFamily: 'var(--script)', fontSize: 80, color: 'var(--rose-deep)', lineHeight: 1, marginBottom: 28 }}>♡</div>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 36, fontWeight: 400, marginBottom: 16 }}>{r.successTitle}</h2>
+          <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 19, color: 'var(--ink-soft)' }}>{r.successBody}</p>
+        </div>
+      </Section>
+    );
+  }
+
+  return (
+    <Section id="rsvp" kicker={r.kicker} title={r.title} dark narrow>
+      <p style={{
+        textAlign: 'center', fontFamily: 'var(--serif)', fontStyle: 'italic',
+        fontSize: 19, color: 'var(--ink-soft)', marginBottom: 56, textWrap: 'pretty',
+      }}>{r.lead}</p>
+
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 28, maxWidth: 560, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <div>
+            <label style={labelStyle}>{r.name}</label>
+            <input name="name" required placeholder={r.namePh}
+              style={inputStyle}
+              onFocus={e => e.target.style.borderColor = 'var(--rose)'}
+              onBlur={e => e.target.style.borderColor = 'var(--line)'} />
+          </div>
+          <div>
+            <label style={labelStyle}>{r.email}</label>
+            <input name="_replyto" type="email" required placeholder={r.emailPh}
+              style={inputStyle}
+              onFocus={e => e.target.style.borderColor = 'var(--rose)'}
+              onBlur={e => e.target.style.borderColor = 'var(--line)'} />
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gap: 16 }}>
+          <div>
+            <label style={labelStyle}>{r.sat}</label>
+            <AttendRadio value={sat} set={setSat} yesLabel={r.attending} noLabel={r.notAttending} />
+          </div>
+          <div>
+            <label style={labelStyle}>{r.sun}</label>
+            <AttendRadio value={sun} set={setSun} yesLabel={r.attending} noLabel={r.notAttending} />
+          </div>
+        </div>
+
+        <div>
+          <label style={labelStyle}>{r.children}</label>
+          <input name="children" placeholder={r.childrenPh}
+            style={inputStyle}
+            onFocus={e => e.target.style.borderColor = 'var(--rose)'}
+            onBlur={e => e.target.style.borderColor = 'var(--line)'} />
+        </div>
+
+        <div>
+          <label style={labelStyle}>{r.dietary}</label>
+          <input name="dietary" placeholder={r.dietaryPh}
+            style={inputStyle}
+            onFocus={e => e.target.style.borderColor = 'var(--rose)'}
+            onBlur={e => e.target.style.borderColor = 'var(--line)'} />
+        </div>
+
+        <div>
+          <label style={labelStyle}>{r.message}</label>
+          <textarea name="message" placeholder={r.messagePh} rows={4}
+            style={{ ...inputStyle, resize: 'vertical' }}
+            onFocus={e => e.target.style.borderColor = 'var(--rose)'}
+            onBlur={e => e.target.style.borderColor = 'var(--line)'} />
+        </div>
+
+        <div style={{ textAlign: 'center', paddingTop: 8 }}>
+          <button type="submit" disabled={status === 'sending'} style={{
+            padding: '14px 48px',
+            background: 'var(--ink)', color: 'var(--cream)',
+            border: 'none', cursor: 'pointer',
+            fontFamily: 'var(--sans)', fontSize: 12,
+            letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 500,
+            opacity: status === 'sending' ? 0.6 : 1,
+            transition: 'opacity 0.2s',
+          }}>{status === 'sending' ? '…' : r.submit}</button>
+          {status === 'error' && (
+            <p style={{ marginTop: 16, fontFamily: 'var(--sans)', fontSize: 13, color: 'var(--rose-deep)' }}>
+              Something went wrong — please try again or send us a message directly.
+            </p>
+          )}
+        </div>
+
+      </form>
+    </Section>
+  );
+}
+
 // ——— FOOTER ———
 function Footer({ t }) {
   return (
@@ -544,4 +689,4 @@ function Footer({ t }) {
   );
 }
 
-Object.assign(window, { Hero, Story, Info, Timeline, Travel, Dresscode, Gallery, FAQ, Footer });
+Object.assign(window, { Hero, Story, Info, Timeline, Travel, Dresscode, Gallery, FAQ, RSVP, Footer });

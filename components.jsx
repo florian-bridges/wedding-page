@@ -134,6 +134,7 @@ function Nav({ t, lang, setLang, active }) {
     { id: 'dresscode', label: t.nav.dresscode },
     { id: 'gallery', label: t.nav.gallery },
     { id: 'faq', label: t.nav.faq },
+    { id: 'rsvp', label: t.nav.rsvp },
   ];
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {

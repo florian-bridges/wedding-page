@@ -18,7 +18,7 @@ function App() {
 
   // Scroll spy
   useEffect_app(() => {
-    const sectionIds = ['top', 'story', 'info', 'timeline', 'travel', 'dresscode', 'gallery', 'faq'];
+    const sectionIds = ['top', 'story', 'info', 'timeline', 'travel', 'dresscode', 'gallery', 'faq', 'rsvp'];
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) setActive(e.target.id);
@@ -49,6 +49,7 @@ function App() {
       <Dresscode t={t} />
       <Gallery t={t} />
       <FAQ t={t} />
+      <RSVP t={t} />
       <Footer t={t} />
 
       <TweaksPanel title="Tweaks">
