@@ -15,7 +15,7 @@ const CONTENT = {
       eyebrow: "Wir heiraten",
       and: "und",
       date: "04. September 2027",
-      place: "Villa Finetta · Salsomaggiore Terme · Italia",
+      place: "Villa Finetta · Tabiano Terme · Italien",
       sub: "Save the date",
     },
     countdown: {
@@ -98,7 +98,7 @@ const CONTENT = {
         { q: "Können wir Kinder mitbringen?", a: "Ja, sehr gerne — eure Kinder sind herzlich willkommen. Sagt uns im RSVP einfach Bescheid, wer mitkommt, damit wir alles entsprechend planen können." },
         { q: "Gibt es vegetarische / vegane Optionen?", a: "Ja — es gibt Pizza, und jeder kann sich seine Pizza nach Wunsch auswählen (vegetarisch und vegan inklusive). Allergien könnt ihr uns gerne im RSVP mitteilen." },
         { q: "Wann sollten wir absagen / zusagen?", a: "Wir freuen uns über eure Antwort bis spätestens 31. März 2027." },
-        { q: "Was ist mit Geschenken?", a: "Eure Anwesenheit ist unser schönstes Geschenk. Wer dennoch beitragen möchte: wir wünschen uns einen Beitrag zu unserer Hochzeitsreise." },
+        { q: "Was ist mit Geschenken?", a: "Eure Anwesenheit ist unser schönstes Geschenk. Wer dennoch beitragen möchte: wir freuen uns über ein wenig Unterstützung bei unserer Hochzeitsreise." },
         { q: "Drinnen oder draußen?", a: "Wir feiern unter freiem Himmel — die Villa hat aber einen wunderschönen überdachten Bereich, falls das Wetter andere Pläne hat." },
         { q: "Wie warm wird es?", a: "Anfang September liegen die Tagestemperaturen bei 25–28°C, abends kühlt es auf angenehme 18°C ab. Eine leichte Stola oder Jacke schadet nicht." },
       ],
@@ -147,7 +147,7 @@ const CONTENT = {
       eyebrow: "We're getting married",
       and: "and",
       date: "September 4, 2027",
-      place: "Villa Finetta · Salsomaggiore Terme · Italy",
+      place: "Villa Finetta · Tabiano Terme · Italy",
       sub: "Save the date",
     },
     countdown: {
