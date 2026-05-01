@@ -18,10 +18,10 @@ function Hero({ t }) {
       overflow: 'hidden',
     }}>
       {/* corner sprigs */}
-      <div className="hero-sprig" style={{ position: 'absolute', top: 100, left: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(-15deg)' }}>
+      <div className="hero-sprig hero-sprig-tl" style={{ position: 'absolute', top: 100, left: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(-15deg)' }}>
         <Sprig size={140} />
       </div>
-      <div className="hero-sprig" style={{ position: 'absolute', bottom: 80, right: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(165deg)' }}>
+      <div className="hero-sprig hero-sprig-br" style={{ position: 'absolute', bottom: 80, right: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(165deg)' }}>
         <Sprig size={140} />
       </div>
 
@@ -102,10 +102,15 @@ function Hero({ t }) {
       {/* scroll cue */}
       <div style={{
         position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
-        color: 'var(--ink-soft)', opacity: 0.6,
+        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
+        color: 'var(--ink-soft)', opacity: 0.5,
       }}>
-        <div style={{ width: 1, height: 36, background: 'currentColor' }} />
+        <style>{`@keyframes scrollBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }`}</style>
+        <svg style={{ animation: 'scrollBounce 2s ease-in-out infinite' }}
+          width="20" height="12" viewBox="0 0 20 12" fill="none"
+          stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="1,1 10,11 19,1" />
+        </svg>
       </div>
     </section>
   );

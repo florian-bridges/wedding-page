@@ -96,7 +96,8 @@ function App() {
       <style>{`
         @media (max-width: 900px) {
           .navlinks { display: none !important; }
-          .hero-sprig { display: none !important; }
+          .hero-sprig-tl { top: 60px !important; left: 8px !important; transform-origin: top left !important; transform: rotate(-15deg) scale(0.55) !important; }
+          .hero-sprig-br { bottom: 40px !important; right: 8px !important; transform-origin: bottom right !important; transform: rotate(165deg) scale(0.55) !important; }
           .story-grid, .timeline-grid, .dress-grid, .travel-grid {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
