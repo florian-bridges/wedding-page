@@ -97,7 +97,7 @@ const CONTENT = {
       items: [
         { q: "Können wir Kinder mitbringen?", a: "Ja, sehr gerne — eure Kinder sind herzlich willkommen. Sagt uns im RSVP einfach Bescheid, wer mitkommt, damit wir alles entsprechend planen können." },
         { q: "Gibt es vegetarische / vegane Optionen?", a: "Ja — es gibt Pizza, und jeder kann sich seine Pizza nach Wunsch auswählen (vegetarisch und vegan inklusive). Allergien könnt ihr uns gerne im RSVP mitteilen." },
-        { q: "Wann sollten wir absagen / zusagen?", a: "Wir freuen uns über eure Antwort bis spätestens 31. März 2027." },
+        { q: "Wann sollten wir absagen / zusagen?", a: "Wir freuen uns über eure Antwort bis Ende des Jahres." },
         { q: "Was ist mit Geschenken?", a: "Eure Anwesenheit ist unser schönstes Geschenk. Wer dennoch beitragen möchte: wir freuen uns über ein wenig Unterstützung bei unserer Hochzeitsreise." },
         { q: "Drinnen oder draußen?", a: "Wir feiern unter freiem Himmel — die Villa hat aber einen wunderschönen überdachten Bereich, falls das Wetter andere Pläne hat." },
         { q: "Wie warm wird es?", a: "Anfang September liegen die Tagestemperaturen bei 25–28°C, abends kühlt es auf angenehme 18°C ab. Eine leichte Stola oder Jacke schadet nicht." },
@@ -106,7 +106,7 @@ const CONTENT = {
     rsvp: {
       kicker: "Zusage",
       title: "Bist du dabei?",
-      lead: "Bitte sag uns bis spätestens 31. März 2027 Bescheid — damit wir alles in Ruhe planen können.",
+      lead: "Bitte sag uns bis spätestens Ende des Jahres Bescheid — damit wir alles in Ruhe planen können.",
       name: "Name(n)",
       namePh: "Dein Name / Eure Namen",
       email: "E-Mail",
@@ -229,7 +229,7 @@ const CONTENT = {
       items: [
         { q: "Can we bring our kids?", a: "Yes, absolutely — your children are warmly welcome. Just let us know in your RSVP who's coming so we can plan accordingly." },
         { q: "Are there vegetarian / vegan options?", a: "Yes — we'll be serving pizza, and everyone can choose their own (vegetarian and vegan included). Please share any allergies in your RSVP." },
-        { q: "When should we RSVP?", a: "We'd love your reply by March 31, 2027 at the latest." },
+        { q: "When should we RSVP?", a: "We'd love your reply by end of the year." },
         { q: "What about gifts?", a: "Your presence is the best gift we could ask for. If you'd still like to contribute: we're saving for our honeymoon." },
         { q: "Indoor or outdoor?", a: "We're celebrating under the open sky — but the villa has a beautiful covered area in case the weather has other plans." },
         { q: "How warm will it be?", a: "Early September brings 25–28°C during the day, cooling to a pleasant 18°C in the evening. A light shawl or jacket won't hurt." },
@@ -238,7 +238,7 @@ const CONTENT = {
     rsvp: {
       kicker: "RSVP",
       title: "Will you join us?",
-      lead: "Please let us know by March 31, 2027 — so we can plan everything with care.",
+      lead: "Please let us know by end of the year — so we can plan everything with care.",
       name: "Name(s)",
       namePh: "Your name(s)",
       email: "Email",
