@@ -18,10 +18,10 @@ function Hero({ t }) {
       overflow: 'hidden',
     }}>
       {/* corner sprigs */}
-      <div style={{ position: 'absolute', top: 100, left: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(-15deg)' }}>
+      <div className="hero-sprig" style={{ position: 'absolute', top: 100, left: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(-15deg)' }}>
         <Sprig size={140} />
       </div>
-      <div style={{ position: 'absolute', bottom: 80, right: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(165deg)' }}>
+      <div className="hero-sprig" style={{ position: 'absolute', bottom: 80, right: 40, opacity: 0.4, color: 'var(--sage-deep)', transform: 'rotate(165deg)' }}>
         <Sprig size={140} />
       </div>
 

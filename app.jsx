@@ -96,10 +96,12 @@ function App() {
       <style>{`
         @media (max-width: 900px) {
           .navlinks { display: none !important; }
+          .hero-sprig { display: none !important; }
           .story-grid, .timeline-grid, .dress-grid, .travel-grid {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
           }
+          .story-grid > div:first-child { position: static !important; }
           .info-grid {
             grid-template-columns: 1fr !important;
           }
