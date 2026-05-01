@@ -290,8 +290,8 @@ function Timeline({ t }) {
 function Travel({ t }) {
   const tr = t.travel;
   const icons = {
-    0: <path d="M2 14 L18 6 L19 9 L8 14 L11 16 L13 14 L14 14.5 L12.5 17 L18 17 L18 18 L2 18 Z" />,
-    1: <><circle cx="6" cy="14" r="2" /><circle cx="14" cy="14" r="2" /><path d="M3 14 L4 9 L13 9 L17 14 M5 14 L13 14" /></>,
+    0: <><circle cx="6" cy="14" r="2" /><circle cx="14" cy="14" r="2" /><path d="M3 14 L4 9 L13 9 L17 14 M5 14 L13 14" /></>,
+    1: <path d="M2 14 L18 6 L19 9 L8 14 L11 16 L13 14 L14 14.5 L12.5 17 L18 17 L18 18 L2 18 Z" />,
     2: <><rect x="4" y="3" width="12" height="14" rx="1.5" /><circle cx="7" cy="14" r="1" /><circle cx="13" cy="14" r="1" /><path d="M5 7 L15 7 M5 11 L15 11" /></>,
     3: <><path d="M3 17 L17 17 M5 17 L5 9 L10 5 L15 9 L15 17 M8 17 L8 12 L12 12 L12 17" /></>,
   };
