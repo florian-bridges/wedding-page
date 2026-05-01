@@ -1,0 +1,222 @@
+// Bilingual content — DE primary, EN secondary
+const CONTENT = {
+  de: {
+    nav: {
+      story: "Unsere Geschichte",
+      info: "Hochzeit",
+      timeline: "Ablauf",
+      travel: "Anreise",
+      dresscode: "Dresscode",
+      gallery: "Momente",
+      faq: "FAQ",
+    },
+    hero: {
+      eyebrow: "Wir heiraten · Freie Trauung",
+      and: "und",
+      date: "04. September 2027",
+      place: "Villa Finetta · Salsomaggiore Terme · Italia",
+      sub: "Save the date",
+    },
+    countdown: {
+      label: "Bis zu unserem Ja-Wort",
+      d: "Tage", h: "Stunden", m: "Minuten", s: "Sekunden",
+    },
+    story: {
+      kicker: "Kapitel Eins",
+      title: "Unsere Geschichte",
+      lead: "Manchmal beginnt die größte Liebe ganz leise.",
+      body: [
+        "Unsere Geschichte begann vor einigen Jahren — wir sind als Freunde nach Italien gereist, doch mit mehr als das im Gepäck zurückgekommen. Wir haben gemeinsam gelacht, uns unterstützt und sind Seite an Seite gewachsen.",
+        "Italien ist für uns deshalb mehr als nur ein Ort — es ist der Anfang von UNS. Und genau hier möchten wir nun auch unser nächstes Kapitel beginnen.",
+      ],
+      pull1: "Aus Freundschaft wurde Liebe.",
+      pull2: "Aus Liebe wird ein gemeinsames Leben.",
+      close: "Wir hoffen, vor unseren Herzensmenschen uns das Ja-Wort zu geben, besondere Momente zu teilen und gemeinsam Erinnerungen zu schaffen.",
+      sign: "Viktoria & Florian",
+    },
+    info: {
+      kicker: "Das Wesentliche",
+      title: "Die Hochzeit",
+      cards: [
+        { label: "Wann", main: "Samstag, 04. September 2027", sub: "Freie Trauung · 16:00 Uhr" },
+        { label: "Wo", main: "Villa Finetta", sub: "Via Monteblano 79\n43039 Salsomaggiore Terme PR\nItalia" },
+        { label: "Anschließend", main: "Sonntag, 05. September", sub: "Brunch & entspannter Tag am Pool" },
+      ],
+      mapHint: "Auf der Karte ansehen",
+    },
+    timeline: {
+      kicker: "Der Ablauf",
+      title: "Zwei Tage zum Erinnern",
+      sat: "Samstag · 04. September",
+      sun: "Sonntag · 05. September",
+      events: {
+        sat: [
+          { t: "15:00", h: "Ankunft", d: "Erster Sekt, ein Lächeln, ein herzliches Wiedersehen." },
+          { t: "16:00", h: "Freie Trauung", d: "Wir geben uns das Ja-Wort — vor euch, unseren Herzensmenschen." },
+          { t: "17:00", h: "Aperitivo", d: "Kühle Drinks, kleine Häppchen und die ersten goldenen Abendstunden." },
+          { t: "19:00", h: "Dinner", d: "Pizza, Antipasti, gute Gespräche — ein entspannter Abend zusammen." },
+          { t: "22:00", h: "Tanz in die Nacht", d: "Bis die Grillen leiser sind als die Musik." },
+        ],
+        sun: [
+          { t: "11:00", h: "Brunch", d: "Cornetti, Caffè und ein langsames Aufwachen." },
+          { t: "ab 13:00", h: "Pool & Dolce Far Niente", d: "Sonne, Wasser, Stille — bleibt so lange ihr mögt." },
+        ],
+      },
+    },
+    travel: {
+      kicker: "Anreise & Lage",
+      title: "So findet ihr uns",
+      lead: "Salsomaggiore Terme liegt in der Emilia-Romagna, etwa zwischen Mailand und Bologna. Wir empfehlen, mindestens zwei Nächte zu bleiben.",
+      cards: [
+        { h: "Mit dem Flugzeug", b: "Nächste Flughäfen: Mailand-Linate (MXP/LIN, ~1:45h), Bologna (BLQ, ~1:30h), Parma (PMF, ~30 min)." },
+        { h: "Mit dem Auto", b: "Über die A1 bis Fidenza, dann ca. 15 min nach Salsomaggiore. Parkplätze direkt an der Villa." },
+        { h: "In der Nähe", b: "Tabiano Terme erreicht ihr in ~20 Min. zu Fuß, Salsomaggiore Terme in ~16 Min. mit dem Auto. Lokaler Taxi-Service: +39 324 682 0285." },
+        { h: "Ankunft an der Villa", b: "Die Villa liegt etwas außerhalb des Ortes, am Ende einer kleinen Schotterstraße mit einem Tor. Für die Einfahrt benötigt ihr einen PIN-Code, den wir euch rechtzeitig mitteilen." },
+      ],
+    },
+    dresscode: {
+      kicker: "Dresscode",
+      title: "Festlich · Sommer · Italianità",
+      lead: "Stellt euch einen italienischen Spätsommerabend vor: leicht, festlich, fließend.",
+      do: ["Lange Kleider in zarten Farben", "Heller Anzug oder dunkler Sommeranzug", "Pastelltöne, Creme, Salbei, Rosé", "Bequeme Schuhe für Wiese & Steinboden"],
+      dont: ["Strikt schwarze Outfits", "Stilettos auf weichem Boden"],
+      doTitle: "Gerne",
+      dontTitle: "Lieber nicht",
+      foot: "Im Zweifel: lieber zu festlich als zu leger.",
+    },
+    gallery: {
+      kicker: "Momente",
+      title: "Bilder, die wir lieben",
+      lead: "Hier folgen unsere liebsten Erinnerungen — und bald auch die mit euch.",
+      caps: ["Wo alles begann", "Cinque Terre, 2022", "Ein ganz normaler Sonntag", "Verlobung in Verona", "Villa Finetta, Sommer 2026"],
+    },
+    faq: {
+      kicker: "Häufige Fragen",
+      title: "Bevor ihr fragt",
+      items: [
+        { q: "Können wir Kinder mitbringen?", a: "Ja, sehr gerne — eure Kinder sind herzlich willkommen. Sagt uns im RSVP einfach Bescheid, wer mitkommt, damit wir alles entsprechend planen können." },
+        { q: "Gibt es vegetarische / vegane Optionen?", a: "Ja — es gibt Pizza, und jede:r kann sich seine Pizza nach Wunsch auswählen (vegetarisch und vegan inklusive). Allergien könnt ihr uns gerne im RSVP mitteilen." },
+        { q: "Wann sollten wir absagen / zusagen?", a: "Wir freuen uns über eure Antwort bis spätestens 31. März 2027." },
+        { q: "Was ist mit Geschenken?", a: "Eure Anwesenheit ist unser schönstes Geschenk. Wer dennoch beitragen möchte: wir wünschen uns einen Beitrag zu unserer Hochzeitsreise." },
+        { q: "Drinnen oder draußen?", a: "Wir feiern unter freiem Himmel — die Villa hat aber einen wunderschönen überdachten Bereich, falls das Wetter andere Pläne hat." },
+        { q: "Wie warm wird es?", a: "Anfang September liegen die Tagestemperaturen bei 25–28°C, abends kühlt es auf angenehme 18°C ab. Eine leichte Stola oder Jacke schadet nicht." },
+      ],
+    },
+    foot: {
+      sign: "Mit Liebe,",
+      names: "V & F",
+      contact: "Bei Fragen erreicht ihr uns jederzeit per Nachricht.",
+    },
+  },
+
+  en: {
+    nav: {
+      story: "Our story",
+      info: "Wedding",
+      timeline: "Schedule",
+      travel: "Travel",
+      dresscode: "Dress code",
+      gallery: "Moments",
+      faq: "FAQ",
+    },
+    hero: {
+      eyebrow: "We're getting married · Symbolic ceremony",
+      and: "and",
+      date: "September 4, 2027",
+      place: "Villa Finetta · Salsomaggiore Terme · Italy",
+      sub: "Save the date",
+    },
+    countdown: {
+      label: "Until we say yes",
+      d: "days", h: "hours", m: "min", s: "sec",
+    },
+    story: {
+      kicker: "Chapter one",
+      title: "Our story",
+      lead: "Sometimes the greatest love begins very quietly.",
+      body: [
+        "Our story began a few years ago — we travelled to Italy as friends and came back with much more than that in our luggage. We laughed together, supported each other, and grew side by side.",
+        "Italy, for us, is more than just a place — it is the beginning of US. And right here is where we want to start our next chapter.",
+      ],
+      pull1: "Friendship became love.",
+      pull2: "Love is becoming a shared life.",
+      close: "We hope to say our \"yes\" in front of the people closest to our hearts, to share special moments and to create memories together.",
+      sign: "Viktoria & Florian",
+    },
+    info: {
+      kicker: "The essentials",
+      title: "The wedding",
+      cards: [
+        { label: "When", main: "Saturday, September 4, 2027", sub: "Symbolic ceremony · 4:00 pm" },
+        { label: "Where", main: "Villa Finetta", sub: "Via Monteblano 79\n43039 Salsomaggiore Terme PR\nItaly" },
+        { label: "And then", main: "Sunday, September 5", sub: "Brunch & a slow day by the pool" },
+      ],
+      mapHint: "Open in maps",
+    },
+    timeline: {
+      kicker: "The schedule",
+      title: "Two days to remember",
+      sat: "Saturday · September 4",
+      sun: "Sunday · September 5",
+      events: {
+        sat: [
+          { t: "3:00 pm", h: "Arrival", d: "First sparkling, first smiles, a warm welcome." },
+          { t: "4:00 pm", h: "Symbolic ceremony", d: "We say our yes — in front of you, our dearest people." },
+          { t: "5:00 pm", h: "Aperitivo", d: "Cool drinks, small bites and the first golden hours of the evening." },
+          { t: "7:00 pm", h: "Dinner", d: "Pizza, antipasti, good company — a relaxed evening together." },
+          { t: "10:00 pm", h: "Dancing", d: "Until the crickets are quieter than the music." },
+        ],
+        sun: [
+          { t: "11:00 am", h: "Brunch", d: "Cornetti, caffè and a slow morning." },
+          { t: "from 1 pm", h: "Pool & dolce far niente", d: "Sun, water, silence — stay as long as you'd like." },
+        ],
+      },
+    },
+    travel: {
+      kicker: "Travel & location",
+      title: "How to find us",
+      lead: "Salsomaggiore Terme sits in Emilia-Romagna, roughly between Milan and Bologna. We'd suggest staying at least two nights.",
+      cards: [
+        { h: "By plane", b: "Closest airports: Milan (MXP/LIN, ~1h45), Bologna (BLQ, ~1h30), Parma (PMF, ~30 min)." },
+        { h: "By car", b: "A1 motorway to Fidenza, then 15 min to Salsomaggiore. Parking right at the villa." },
+        { h: "Nearby", b: "Tabiano Terme is ~20 min on foot, Salsomaggiore Terme ~16 min by car. Local taxi service: +39 324 682 0285." },
+        { h: "Arriving at the villa", b: "The villa sits just outside town, at the end of a small gravel road with a gate. You'll need a PIN code to enter — we'll share it with you in good time." },
+      ],
+    },
+    dresscode: {
+      kicker: "Dress code",
+      title: "Festive · summer · italianità",
+      lead: "Picture an Italian late-summer evening: light, festive, flowing.",
+      do: ["Long dresses in soft colours", "Light suit or dark summer suit", "Pastels, cream, sage, rosé", "Comfortable shoes for grass & stone"],
+      dont: ["Strictly black outfits", "Stilettos on soft ground"],
+      doTitle: "Yes please",
+      dontTitle: "Rather not",
+      foot: "When in doubt: rather too festive than too casual.",
+    },
+    gallery: {
+      kicker: "Moments",
+      title: "Pictures we love",
+      lead: "Our favourite memories so far — and soon, the ones with you.",
+      caps: ["Where it all began", "Cinque Terre, 2022", "An ordinary Sunday", "Engagement in Verona", "Villa Finetta, summer 2026"],
+    },
+    faq: {
+      kicker: "Frequently asked",
+      title: "Before you ask",
+      items: [
+        { q: "Can we bring our kids?", a: "Yes, absolutely — your children are warmly welcome. Just let us know in your RSVP who's coming so we can plan accordingly." },
+        { q: "Are there vegetarian / vegan options?", a: "Yes — we'll be serving pizza, and everyone can choose their own (vegetarian and vegan included). Please share any allergies in your RSVP." },
+        { q: "When should we RSVP?", a: "We'd love your reply by March 31, 2027 at the latest." },
+        { q: "What about gifts?", a: "Your presence is the best gift we could ask for. If you'd still like to contribute: we're saving for our honeymoon." },
+        { q: "Indoor or outdoor?", a: "We're celebrating under the open sky — but the villa has a beautiful covered area in case the weather has other plans." },
+        { q: "How warm will it be?", a: "Early September brings 25–28°C during the day, cooling to a pleasant 18°C in the evening. A light shawl or jacket won't hurt." },
+      ],
+    },
+    foot: {
+      sign: "With love,",
+      names: "V & F",
+      contact: "Reach us anytime — just send a message.",
+    },
+  },
+};
+
+window.CONTENT = CONTENT;
