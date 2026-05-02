@@ -69,7 +69,7 @@ const CONTENT = {
       title: "So findet ihr uns",
       lead: "Tabiano Terme liegt in der Emilia-Romagna, etwa zwischen Mailand und Bologna. Wir empfehlen, mindestens zwei Nächte zu bleiben.",
       cards: [
-        { h: "Mit dem Auto", b: "Über die A1 bis Fidenza, dann ca. 15 min nach Salsomaggiore. Parkplätze direkt an der Villa." },
+        { h: "Mit dem Auto", b: "Über die A1 bis Fidenza, dann ca. 15 min nach Tabiano. Parkplätze direkt an der Villa." },
         { h: "Mit dem Flugzeug", b: "Nächste Flughäfen: Mailand-Linate (MXP/LIN, ~1:45h), Bologna (BLQ, ~1:30h), Parma (PMF, ~30 min)." },
         { h: "In der Nähe", b: "Tabiano Terme erreicht ihr in ~20 Min. zu Fuß, Salsomaggiore Terme in ~15 Min. mit dem Auto. Lokaler Taxi-Service: +39 324 682 0285." },
         { h: "Ankunft an der Villa", b: "Die Villa liegt etwas außerhalb des Ortes, am Ende einer kleinen Schotterstraße mit einem Tor. Für die Einfahrt benötigt ihr einen PIN-Code, den wir euch rechtzeitig mitteilen." },
@@ -201,7 +201,7 @@ const CONTENT = {
       title: "How to find us",
       lead: "Tabiano Terme sits in Emilia-Romagna, roughly between Milan and Bologna. We'd suggest staying at least two nights.",
       cards: [
-        { h: "By car", b: "A1 motorway to Fidenza, then 15 min to Salsomaggiore. Parking right at the villa." },
+        { h: "By car", b: "A1 motorway to Fidenza, then 15 min to Tabiano. Parking right at the villa." },
         { h: "By plane", b: "Closest airports: Milan (MXP/LIN, ~1h45), Bologna (BLQ, ~1h30), Parma (PMF, ~30 min)." },
         { h: "Nearby", b: "Tabiano Terme is ~20 min on foot, Salsomaggiore Terme ~15 min by car. Local taxi service: +39 324 682 0285." },
         { h: "Arriving at the villa", b: "The villa sits just outside town, at the end of a small gravel road with a gate. You'll need a PIN code to enter — we'll share it with you in good time." },
